@@ -33,10 +33,7 @@ body{
 
 .slide-one{
 	text-align:center;
-	background:
-	linear-gradient(rgba(44, 0, 62, 0.32), rgba(165, 63, 167, 0.36)),   
-	url(/CheeseBites.github.io/src/section_one.jpg);
-	background-blend-mode: color-burn;
+	background-color: aliceblue
 }
 
 .slide-one .inner{
@@ -79,7 +76,8 @@ body{
 }
 
 .slide-three{
-	background-image: url(/CheeseBites.github.io/src/192A_Nature.jpg);
+	background-color: aliceblue;
+	max-height: fit-content;
 }
 
 .margin-all{
@@ -110,6 +108,8 @@ hr{
 
 .font-awesome{
 	font-family: 'font-awesome', Times, serif;
+	font-weight:600;
+	color:black;
 }
 
 .nav{
@@ -171,7 +171,6 @@ hr{
   100% {
     transform: translateY(0px);
     opacity: 1;
-    border-top: solid 3px #d08484;
   }
 }
 
@@ -250,10 +249,6 @@ hr{
 	flex-flow: column;
 }
 
-.slide-three .row{
-	height:85%;
-}
-
 .slide-four {
 	height: 15vh;
 	width:100%;
@@ -280,9 +275,183 @@ hr{
   padding: 0px 1%;
 }
 
-.inactiveLink {
-   pointer-events: none;
-   cursor: default;
-   color: grey !important;
+/*figure{
+	height: fit-content;
+	max-height:300px;
+	max-width: 40%;
+	position:relative;
+	float:left;
+}
 
+figcaption{
+	position:absolute;
+	top:0;
+	left:0;
+	height:100%;
+	width:100%;
+	padding:5%;
+}
+
+figcaption h2{
+	color:white;
+}
+
+figure:hover img{
+	opacity:.6;
+	color:black;
+}
+
+.figure-img{
+	opacity: 0.8;
+
+}*/
+
+
+figure.effect-apollo {
+	background: #3498db;
+}
+
+figure.effect-apollo img {
+	opacity: 0.95;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: scale3d(1.05,1.05,1);
+	transform: scale3d(1.05,1.05,1);
+	height: 300px;
+	width:100%;
+}
+
+figure.effect-apollo figcaption::before {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(255,255,255,0.5);
+	content: '';
+	-webkit-transition: -webkit-transform 0.6s;
+	transition: transform 0.6s;
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+}
+
+figure.effect-apollo p {
+	position: absolute;
+	right: 2em;
+	bottom: 2em;
+	margin: 3em;
+	padding: 0 1em;
+	max-width: 150px;
+	border-right: 4px solid #fff;
+	text-align: right;
+	opacity: 0;
+	-webkit-transition: opacity 0.35s;
+	transition: opacity 0.35s;
+}
+
+figure.effect-apollo h2 {
+	text-align: left;
+}
+
+figure.effect-apollo:hover img {
+	opacity: 0.6;
+	-webkit-transform: scale3d(1,1,1);
+	transform: scale3d(1,1,1);
+}
+
+figure.effect-apollo:hover figcaption::before {
+	-webkit-transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+	transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+}
+
+figure.effect-apollo:hover p {
+	opacity: 1;
+	-webkit-transition-delay: 0.1s;
+	transition-delay: 0.1s;
+}
+
+.grid {
+	position: relative;
+	clear: both;
+	margin: 0 auto;
+	padding: 1em 0 4em;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+/* Common style */
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 1%;
+	min-width: 320px;
+	max-width: 480px;
+	max-height: 360px;
+	width: 48%;
+	height: auto;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before,
+.grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption,
+.grid figure figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+/* Anchor will cover the whole item by default */
+/* For some effects it will show as a button */
+.grid figure figcaption > a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2,
+.grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
 }
