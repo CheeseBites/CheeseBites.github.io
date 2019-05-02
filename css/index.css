@@ -133,7 +133,7 @@ hr{
 	font-size:1.1em;
 }
 .nav-item{
-	margin:1.5rem;
+	margin:0 1.5rem;
 	font-family:'font-awesome', helvetica, serif;
 }
 
@@ -242,6 +242,10 @@ hr{
 #about-block{
 	animation: slide-X 3s forwards;
 
+}
+
+.about-contents{
+	overflow-y: scroll;
 }
 
 .content{
