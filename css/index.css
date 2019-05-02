@@ -279,36 +279,32 @@ hr{
   padding: 0px 1%;
 }
 
-/*figure{
-	height: fit-content;
-	max-height:300px;
-	max-width: 40%;
-	position:relative;
-	float:left;
+/* width */
+*::-webkit-scrollbar {
+  width: .5rem;
 }
 
-figcaption{
-	position:absolute;
-	top:0;
-	left:0;
-	height:100%;
-	width:100%;
-	padding:5%;
+/* Track */
+*::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #3fb4d8; 
+  border-radius: 10px;
 }
 
-figcaption h2{
-	color:white;
+/* Handle */
+.about-contents::-webkit-scrollbar-thumb {
+  background: #ec4ea4; 
+  border-radius: 10px;
 }
-
-figure:hover img{
-	opacity:.6;
-	color:black;
+/* Handle on hover */
+*::-webkit-scrollbar-thumb:hover {
+  background: #404152; 
 }
-
-.figure-img{
-	opacity: 0.8;
-
-}*/
 
 
 figure.effect-apollo {
